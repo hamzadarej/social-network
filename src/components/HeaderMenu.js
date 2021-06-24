@@ -1,0 +1,45 @@
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import {
+  FaUserAlt,
+  FaRocketchat,
+  FaFireAlt,
+  FaChevronLeft,
+} from "react-icons/fa";
+
+import { IconButton } from "@material-ui/core/";
+{
+  /*  use for the pics object-fit :contain, it will save u; */
+}
+
+function HeaderMenu({ backButton }) {
+  //react hook that behaves like toggle in DOM
+  //https://reactrouter.com/web/api/Hooks
+  const history = useHistory();
+  return (
+    <div className="header-menu">
+      {/* to change the icon to back if we pass this prop */}
+      {backButton ? (
+        <IconButton onClick={() => history.replace(backButton)}>
+          <FaChevronLeft />
+        </IconButton>
+      ) : (
+        <IconButton>
+          <FaUserAlt />
+        </IconButton>
+      )}
+      <Link to="/hamzadarej">
+        <IconButton>
+          <FaFireAlt />
+        </IconButton>
+      </Link>
+      <Link to="/messages">
+        <IconButton>
+          <FaRocketchat />
+        </IconButton>
+      </Link>
+    </div>
+  );
+}
+
+export default HeaderMenu;
