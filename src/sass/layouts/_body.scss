@@ -1,3 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: rgba(0, 128, 0, 0.164);
+  overflow: hidden;
+}
+.body-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid black;
 }
