@@ -10,6 +10,7 @@ function ButtonsSwipe() {
 
   return (
     <div className="buttons-swipe">
+
       <TinderCard preventSwipe={["up", "down"]}>test</TinderCard>
 
       <IconButton className="swipe-redo">
@@ -28,6 +29,7 @@ function ButtonsSwipe() {
       </IconButton>
       <IconButton className="swipe-bolt">
         <FaBolt />
+
       </IconButton>
     </div>
   );
