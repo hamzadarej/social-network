@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
+import SelectInput from "@material-ui/core/Select/SelectInput";
 
 function MessageContext(props) {
   //to get the name of the text user from the url
@@ -10,28 +11,55 @@ function MessageContext(props) {
   const arr = pathname.split("/");
   const personName = arr[arr.length - 1];
   //to find the message history of this name
-  const skata = props.Data.find((el) => el.name == `${personName}`);
-  const personHistory = skata.msges;
-  console.log(personHistory);
-  let img = `${props.Data[0].img}/${Math.floor(Math.random() * 1000)}`;
-  const [texts, setTexts] = useState([props.Data]);
+  const namefinder = props.Data.find((el) => el.name == `${personName}`);
+  const personChatHistory = namefinder.msges;
+  console.log(personChatHistory);
 
-  console.log();
+  const [usertext, setUsertext] = useState("");
+  const handleEv = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="message-context">
-      <p>
-        u matched with <br></br>
-        <b>{personName} </b> on
+      <p className="chatscreen-intro">
+        YOU MATCHED WITH
+        <b>
+          &nbsp;
+          {personName.toUpperCase()}&nbsp;
+        </b>
+        on
         {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
 
-      {props.Data.map((e) => {
-        return (
-          <div className="skt">
-            <p>{e.msges.map((el) => `${el} `)}</p>
-          </div>
-        );
+      {personChatHistory.map((e) => {
+        if (personName) {
+          return (
+            <div className="chatscreen-message">
+              <Avatar className="chatscreen-avatar" alt={`${personName}`} />
+              <p className="chatscreen-text">{e}</p>
+            </div>
+          );
+        } else {
+          return (
+            <div className="chatscreen-user-message">
+              <p className="chatscreen-user-text">{e}</p>
+            </div>
+          );
+        }
       })}
+
+      <form className="user-input">
+        <input
+          value={usertext}
+          onChange={(e) => setUsertext(e.target.value)}
+          className="user-input-field"
+          placeholder="Type ur message"
+          type="text"
+        ></input>
+        <button type="submit" onClick={handleEv} className="user-input-button">
+          SEND
+        </button>
+      </form>
     </div>
   );
 }

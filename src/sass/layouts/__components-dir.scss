@@ -3,7 +3,7 @@ a:visited,
 a:link,
 a:active {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 .message {
   display: flex;
@@ -31,8 +31,66 @@ h2 {
 .timestamp {
   color: lightgray;
 }
-.skt {
+.chatscreen-message {
+  display: flex;
+  align-items: center;
+  padding: 19px;
+  justify-content: left;
+}
+
+.chatscreen-intro {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.24);
+  border-radius: 20%;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .message-context {
-  // border: 2px red dashed;
+  width: 96vw;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.chatscreen-avatar {
+}
+.chatscreen-text {
+  margin-left: 10px;
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20%;
+}
+//for the user
+.chatscreen-user-text {
+  margin-left: 10px;
+  background-color: rgb(101, 190, 219);
+  color: white;
+  padding: 15px;
+  border-radius: 20%;
+}
+.chatscreen-user-message {
+  padding: 19px;
+  margin-left: auto;
+}
+.user-input {
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+.user-input-field {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+.user-input-button {
+  border: none;
+  margin-right: 20px;
+  background-color: white;
+  font-weight: 20px;
+  color: black;
 }
