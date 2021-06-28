@@ -12,37 +12,42 @@ import { IconButton } from "@material-ui/core/";
 {
   /*  use for the pics object-fit :contain, it will save u; */
 }
+
 function Cards() {
   //TINDER CARDS SWIPING PART
-  const onSwipe = (direction) => {
+  const onSwipe = (direction) => { 
+    console.log(direction)
     console.log("You swiped: " + direction);
   };
-
+  
+   
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
     const { img,name,id } = obj;
-   
+ console.log(TinderCard.render);
   return (
     <div className="cardContainer"> 
     
       <div className="card" key={id}>
+        
         <IconButton>
-          <FaChevronLeft />
+          <FaChevronLeft  onClick={()=>onSwipe("left") }/>
         </IconButton>
         {/* TINDER CARDS SWIPING PART */}
         <TinderCard
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
           preventSwipe={["right", "left"]}
+          
         >
           <div style={{backgroundImage :`url(${img})`}} className="profil-img"><h1>{name}</h1></div>
         </TinderCard>
         {/* TINDER CARDS SWIPING PART */}
         <IconButton>
-          <FaChevronRight />
+          <FaChevronRight onClick={()=>onSwipe("right")} />
         </IconButton>
       </div>
     </div>
