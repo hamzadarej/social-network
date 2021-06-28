@@ -7,19 +7,19 @@ import { IconButton } from "@material-ui/core/";
 function ButtonsSwipe() {
   return (
     <div className="buttons-swipe">
-      <IconButton>
+      <IconButton className="swipe-redo">
         <FaRedo />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipe-close">
         <AiOutlineClose />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipe-star">
         <FaStar />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipe-heart">
         <FaHeart />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipe-bolt">
         <FaBolt />
       </IconButton>
     </div>
