@@ -16,19 +16,24 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
+
+  console.log(onCardLeftScreen);
+
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
     const { img, name } = obj;
     return (
-      <div className="cardi">
-        <IconButton>
+      <div className="card-wrapper">
+        {/* <IconButton>
           <FaChevronLeft />
-        </IconButton>
+        </IconButton> */}
+
         {/* TINDER CARDS SWIPING PART */}
         <TinderCard
+          className="swipe"
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
-          preventSwipe={["right", "left"]}
+          preventSwipe={["up", "down"]}
         >
           <div
             style={{ backgroundImage: `url(${img})` }}
@@ -38,9 +43,10 @@ function Cards() {
           </div>
         </TinderCard>
         {/* TINDER CARDS SWIPING PART */}
-        <IconButton>
+
+        {/* <IconButton>
           <FaChevronRight />
-        </IconButton>
+        </IconButton> */}
       </div>
     );
   });
