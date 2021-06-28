@@ -8,19 +8,19 @@ function ButtonsSwipe() {
   return (
     <div className="buttons-swipe">
       <IconButton>
-        <FaRedo />
+        <FaRedo id="refresh"/>
       </IconButton>
       <IconButton>
-        <AiOutlineClose />
+        <AiOutlineClose id="close"/>
       </IconButton>
       <IconButton>
-        <FaStar />
+        <FaStar id="superLike" />
       </IconButton>
       <IconButton>
-        <FaHeart />
+        <FaHeart id="like" />
       </IconButton>
       <IconButton>
-        <FaBolt />
+        <FaBolt id="thunder"/>
       </IconButton>
     </div>
   );

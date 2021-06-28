@@ -2,7 +2,6 @@ import React from "react";
 import Message from "./Message";
 import Data from "../Data.json";
 function Messages() {
-  console.log(Data[0].name);
   return (
     <div className="messages">
       <Message

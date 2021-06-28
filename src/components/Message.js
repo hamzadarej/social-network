@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
+
 //the avatar gives them the form of profile pics ,if they get a pic link shows the pic if not shows the icon
 function Message(props) {
   return (

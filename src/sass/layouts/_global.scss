@@ -1,20 +1,31 @@
-.cardi {
-    width: 100vw;
-    height: 80%;
-    border: red 1px solid;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-};
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+.card {
+  width: 100vw;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .profil-img {
-    
-    width: 80vw;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    
+  width: 80vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card h1 {
+  position: absolute;
+  bottom: 15px;
+  color: white;
+  left: 15px;
 }

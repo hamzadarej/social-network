@@ -1,8 +1,42 @@
 .buttons-swipe {
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(59, 54, 54);
 
+}
+
+.buttons-swipe #refresh {
+    color: yellow;
+ &:hover{
+     font-size: 30px;
+ }   
+}
+#close {
+    color: red;
+    
+    &:hover{
+        font-size: 30px;
+    }   
+    
+}
+#superLike {
+    color: rgb(32, 184, 235);
+    &:hover{
+        font-size: 30px;
+    }   
+}
+#like{
+    color: turquoise;
+    &:hover{
+        font-size: 30px;
+    }   
+}
+#thunder {
+    color: purple;
+    &:hover{
+        font-size: 30px;
+    }   
 }
