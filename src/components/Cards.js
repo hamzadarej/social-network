@@ -16,34 +16,37 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
+
+  console.log(onCardLeftScreen);
+
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
-    const { img, name, id } = obj;
-
+    const { img, name } = obj;
     return (
-      <div className="cardContainer">
-        <div className="card" key={id}>
-          <IconButton>
-            <FaChevronLeft />
-          </IconButton>
-          {/* TINDER CARDS SWIPING PART */}
-          <TinderCard
-            onSwipe={onSwipe}
-            onCardLeftScreen={() => onCardLeftScreen("fooBar")}
-            preventSwipe={["right", "left"]}
+      <div className="card-wrapper">
+        {/* <IconButton>
+          <FaChevronLeft />
+        </IconButton> */}
+
+        {/* TINDER CARDS SWIPING PART */}
+        <TinderCard
+          className="swipe"
+          onSwipe={onSwipe}
+          onCardLeftScreen={() => onCardLeftScreen("fooBar")}
+          preventSwipe={["up", "down"]}
+        >
+          <div
+            style={{ backgroundImage: `url(${img})` }}
+            className="profil-img"
           >
-            <div
-              style={{ backgroundImage: `url(${img})` }}
-              className="profil-img"
-            >
-              <h1>{name}</h1>
-            </div>
-          </TinderCard>
-          {/* TINDER CARDS SWIPING PART */}
-          <IconButton>
-            <FaChevronRight />
-          </IconButton>
-        </div>
+            <h1>{name}</h1>
+          </div>
+        </TinderCard>
+        {/* TINDER CARDS SWIPING PART */}
+
+        {/* <IconButton>
+          <FaChevronRight />
+        </IconButton> */}
       </div>
     );
   });
