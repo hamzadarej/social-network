@@ -1,0 +1,28 @@
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 21px;
+  height: 70px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+.message-details {
+  flex: 1;
+  p {
+    color: gray;
+  }
+}
+.message_image {
+  margin-right: 20px;
+}
+
+.timestamp {
+}
