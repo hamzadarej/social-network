@@ -30,7 +30,7 @@ function HeaderMenu({ backButton }) {
       )}
       <Link to="/hamzadarej">
         <IconButton>
-          <FaFireAlt />
+          <FaFireAlt id="tinder-icon"/>
         </IconButton>
       </Link>
       <Link to="/messages">
