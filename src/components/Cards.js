@@ -1,15 +1,11 @@
 import React from "react";
+import Data  from "../Data.json";
 import TinderCard from "react-tinder-card";
 import {
-  FaUserAlt,
-  FaRocketchat,
-  FaStar,
+ 
   FaChevronLeft,
   FaChevronRight,
-  FaFireAlt,
-  FaRedo,
-  FaBolt,
-  FaHeart,
+ 
 } from "react-icons/fa";
 //for the pressing button effect, wrap your  FaChevronLeft, FaChevronRight, with that ;)
 import { IconButton } from "@material-ui/core/";
@@ -26,6 +22,8 @@ function Cards() {
     console.log(myIdentifier + " left the screen");
   };
   //TINDER CARDS SWIPING PART
+  const cartData = Data.map((obj) => {
+    const { img,name } = obj;
   return (
     <div className="cardi">
       <IconButton>
@@ -37,7 +35,7 @@ function Cards() {
         onCardLeftScreen={() => onCardLeftScreen("fooBar")}
         preventSwipe={["right", "left"]}
       >
-        swipe me :p !
+        <div style={{backgroundImage :`url(${img})`}} className="profil-img"><h1>{name}</h1></div>
       </TinderCard>
       {/* TINDER CARDS SWIPING PART */}
       <IconButton>
@@ -45,6 +43,8 @@ function Cards() {
       </IconButton>
     </div>
   );
+   })
+   return cartData;
 }
 
 export default Cards;
