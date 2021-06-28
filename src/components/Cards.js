@@ -1,12 +1,7 @@
 import React from "react";
-import Data  from "../Data.json";
+import Data from "../Data.json";
 import TinderCard from "react-tinder-card";
-import {
- 
-  FaChevronLeft,
-  FaChevronRight,
- 
-} from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 //for the pressing button effect, wrap your  FaChevronLeft, FaChevronRight, with that ;)
 import { IconButton } from "@material-ui/core/";
 {
@@ -21,34 +16,43 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
+
+  console.log(onCardLeftScreen);
+
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
-    const { img,name,id } = obj;
-   
-  return (
-    <div className="cardContainer"> 
-    
-      <div className="card" key={id}>
-        <IconButton>
+
+    const { img, name } = obj;
+    return (
+      <div className="card-wrapper">
+        {/* <IconButton>
           <FaChevronLeft />
-        </IconButton>
+        </IconButton> */}
+
         {/* TINDER CARDS SWIPING PART */}
         <TinderCard
+          className="swipe"
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
-          preventSwipe={["right", "left"]}
+          preventSwipe={["up", "down"]}
         >
-          <div style={{backgroundImage :`url(${img})`}} className="profil-img"><h1>{name}</h1></div>
+          <div
+            style={{ backgroundImage: `url(${img})` }}
+            className="profil-img"
+          >
+            <h1>{name}</h1>
+          </div>
         </TinderCard>
         {/* TINDER CARDS SWIPING PART */}
-        <IconButton>
+
+        {/* <IconButton>
           <FaChevronRight />
-        </IconButton>
+        </IconButton> */}
       </div>
-    </div>
-  );
-   })
-   return cartData;
+    );
+  });
+  return cartData;
+
 }
 
 export default Cards;

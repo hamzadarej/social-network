@@ -7,7 +7,6 @@ import HeaderMenu from "./components/HeaderMenu";
 import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 
-
 //HEY GUYS BASIC STRUCTURE + COMPONENTS ARE DONE!!! I  INSTALLED SOME PACKAGES, FIND HERE THE LINKS + COMMANDS AND DON'T FORGET TO INSTALL THEM BEFORE YOU START WORKING
 // FOR SWIPE https://www.npmjs.com/package/react-tinder-card
 // npm install --save react-tinder-card --legacy-peer-deps
@@ -25,7 +24,6 @@ function App() {
   return (
     <div className="body-container">
       <Router>
-      
         <Switch>
           <Route path="/hamzadarej/" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}

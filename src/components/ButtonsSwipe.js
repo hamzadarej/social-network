@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaStar, FaRedo, FaBolt, FaHeart } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 //for the pressing button effect, i wrap your  FaChevronLeft, FaChevronRight, with that ;)
 import { IconButton } from "@material-ui/core/";
+import TinderCard from "react-tinder-card";
 
 function ButtonsSwipe() {
+  const swipe = (dir) => console.log(dir);
+
   return (
     <div className="buttons-swipe">
-      <IconButton>
-        <FaRedo id="refresh"/>
+
+      <TinderCard preventSwipe={["up", "down"]}>test</TinderCard>
+
+      <IconButton className="swipe-redo">
+        <FaRedo />
       </IconButton>
-      <IconButton>
-        <AiOutlineClose id="close"/>
+
+      <IconButton onClick={() => swipe("left")} className="swipe-close">
+        <AiOutlineClose />
       </IconButton>
-      <IconButton>
-        <FaStar id="superLike" />
+
+      <IconButton className="swipe-star">
+        <FaStar />
       </IconButton>
-      <IconButton>
-        <FaHeart id="like" />
+      <IconButton className="swipe-heart">
+        <FaHeart />
       </IconButton>
-      <IconButton>
-        <FaBolt id="thunder"/>
+      <IconButton className="swipe-bolt">
+        <FaBolt />
+
       </IconButton>
     </div>
   );
