@@ -23,24 +23,28 @@ function Cards() {
   };
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
-    const { img,name } = obj;
+    const { img,name,id } = obj;
+   
   return (
-    <div className="cardi">
-      <IconButton>
-        <FaChevronLeft />
-      </IconButton>
-      {/* TINDER CARDS SWIPING PART */}
-      <TinderCard
-        onSwipe={onSwipe}
-        onCardLeftScreen={() => onCardLeftScreen("fooBar")}
-        preventSwipe={["right", "left"]}
-      >
-        <div style={{backgroundImage :`url(${img})`}} className="profil-img"><h1>{name}</h1></div>
-      </TinderCard>
-      {/* TINDER CARDS SWIPING PART */}
-      <IconButton>
-        <FaChevronRight />
-      </IconButton>
+    <div className="cardContainer"> 
+    
+      <div className="card" key={id}>
+        <IconButton>
+          <FaChevronLeft />
+        </IconButton>
+        {/* TINDER CARDS SWIPING PART */}
+        <TinderCard
+          onSwipe={onSwipe}
+          onCardLeftScreen={() => onCardLeftScreen("fooBar")}
+          preventSwipe={["right", "left"]}
+        >
+          <div style={{backgroundImage :`url(${img})`}} className="profil-img"><h1>{name}</h1></div>
+        </TinderCard>
+        {/* TINDER CARDS SWIPING PART */}
+        <IconButton>
+          <FaChevronRight />
+        </IconButton>
+      </div>
     </div>
   );
    })
