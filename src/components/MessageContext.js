@@ -3,35 +3,35 @@ import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 
 function MessageContext(props) {
+  //to get the name of the text user from the url
+
+  const pathname = window.location.pathname;
+
+  const arr = pathname.split("/");
+  const personName = arr[arr.length - 1];
+  //to find the message history of this name
+  const skata = props.Data.find((el) => el.name == `${personName}`);
+  const personHistory = skata.msges;
+  console.log(personHistory);
   let img = `${props.Data[0].img}/${Math.floor(Math.random() * 1000)}`;
-  const [messages, setMessages] = useState([
-    {
-      name: "someone",
-      image: { img },
-      message: "how is it going",
-    },
-    {
-      name: "someone",
-      image: { img },
-      message: "how is it going",
-    },
-    {
-      name: "someone",
-      message: "how is it going",
-    },
-  ]);
+  const [texts, setTexts] = useState([props.Data]);
+
+  console.log();
   return (
     <div className="message-context">
       <p>
-        u matched with {props.Data[0].name} on
-        {`${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
+        u matched with <br></br>
+        <b>{personName} </b> on
+        {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-        deleniti odio voluptatem dolor ipsa sapiente ducimus esse minima. Itaque
-        vel doloribus officiis magnam culpa rerum eius dolores quos illo, animi
-        neque exercitationem doloremque laboriosam amet accusamus eaque
-      </p>
+
+      {props.Data.map((e) => {
+        return (
+          <div className="skt">
+            <p>{e.msges.map((el) => `${el} `)}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
