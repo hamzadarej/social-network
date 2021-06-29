@@ -21,7 +21,6 @@ function Cards() {
 
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
-
     const { img, name } = obj;
     return (
       <div className="card-wrapper">
@@ -52,7 +51,6 @@ function Cards() {
     );
   });
   return cartData;
-
 }
 
 export default Cards;
