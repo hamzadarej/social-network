@@ -25,13 +25,15 @@ function HeaderMenu({ backButton }) {
         </IconButton>
       ) : (
         // link to profile component
-        <Link to="/hamzadarej/profile">
+        //<Link to="//profile">
+        <div onClick={() => history.push("/profile")}>
           <IconButton>
             <FaUserAlt />
           </IconButton>
-        </Link>
+        </div>
+        // </Link>
       )}
-      <Link to="/hamzadarej">
+      <Link to="/">
         <IconButton>
           <FaFireAlt id="tinder-icon" />
         </IconButton>

@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Data from "../Data.json";
 
 import TinderCard from "react-tinder-card";
@@ -8,7 +8,6 @@ import { IconButton } from "@material-ui/core/";
 {
   /*  use for the pics object-fit :contain, it will save u; */
 }
-
 
 function Cards() {
   //TINDER CARDS SWIPING PART
@@ -20,26 +19,18 @@ function Cards() {
     console.log(myIdentifier + " left the screen");
   };
   const [dataArr, setDataArr] = useState(Data);
-  console.log(dataArr)
-
-  
+  console.log(dataArr);
 
   //TINDER CARDS SWIPING PART
 
-  const cartData = Data.map((obj) => {
-    const { img, name } = obj;
+  var cartData = dataArr.map((obj) => {
+    const { img, name, id } = obj;
+    console.log(dataArr);
     const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
 
-  var cartData =dataArr.map((obj) => {
-    const {img,name,id}=obj;
-    console.log(dataArr);
-    
-let deleteProfil=(id, arr)=> {
-    
-setDataArr(arr.filter((item) => item.id !==id));
-    
-  };
-
+    let deleteProfil = (id, arr) => {
+      setDataArr(arr.filter((item) => item.id !== id));
+    };
 
     return (
       <div className="card-wrapper">
@@ -53,13 +44,11 @@ setDataArr(arr.filter((item) => item.id !==id));
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
           preventSwipe={["up", "down"]}
-          
         >
-          <button 
+          <button
             onClick={() => {
-              deleteProfil(id,dataArr)  ;
-              
-            }} 
+              deleteProfil(id, dataArr);
+            }}
           >
             delete
           </button>
