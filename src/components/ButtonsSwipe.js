@@ -17,8 +17,8 @@ function ButtonsSwipe() {
         <FaRedo />
       </IconButton>
 
-      <IconButton onClick={() => swipe("left")} className="swipe-close">
-        <AiOutlineClose />
+      <IconButton >
+        <AiOutlineClose onClick={() => swipe("left")} className="swipe-close"/>
       </IconButton>
 
       <IconButton className="swipe-star">
