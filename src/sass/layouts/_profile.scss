@@ -49,6 +49,9 @@
   height: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   padding: 0 10px;
+
+  p {
+    padding-top: 20px;
+  }
 }

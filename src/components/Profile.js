@@ -49,7 +49,7 @@ function Profile() {
 
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vel
-          deserunt magnam consequatur officiis eos in harum ipsum dolorum,
+          deserunt magnam consequatur officiis eos.
         </p>
       </div>
     </div>
