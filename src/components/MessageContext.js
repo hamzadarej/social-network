@@ -1,53 +1,65 @@
 import React from "react";
 import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
-function MessageContext() {
-  //   const [messages, setMessages] = useState([
-  //     {
-  //       name: "someone",
-  //       message: "how is it going",
-  //     },
-  //     {
-  //       name: "someone",
-  //       message: "how is it going",
-  //     },
-  //     {
-  //       name: "someone",
-  //       message: "how is it going",
-  //     },
-  //   ]);
+import SelectInput from "@material-ui/core/Select/SelectInput";
+
+function MessageContext(props) {
+  //to get the name of the text user from the url
+
+  const pathname = window.location.pathname;
+
+  const arr = pathname.split("/");
+  const personName = arr[arr.length - 1];
+  //to find the message history of this name
+  const namefinder = props.Data.find((el) => el.name == `${personName}`);
+  const personChatHistory = namefinder.msges;
+  console.log(personChatHistory);
+
+  const [usertext, setUsertext] = useState("");
+  const handleEv = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="message-context">
-      {/* 
-      {messages.map((inbox) => {
-    to check if i am writing or is someone else words
-     message.name ? (
-         <div>
-     <Avatar className="chat_image" alt={message.name} src={message.pic} />
-           <p>{messages.message}</p>
-         </div>;) : (<div><p>{messages.message}</p>
-         </div>;))
-       })} */}
-      <p>u matched with (someone) on 10/10/2050</p>
-      <p>
-        {" "}
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-        deleniti odio voluptatem dolor ipsa sapiente ducimus esse minima. Itaque
-        vel doloribus officiis magnam culpa rerum eius dolores quos illo, animi
-        neque exercitationem doloremque laboriosam amet accusamus eaque
-        accusantium nam, facere beatae molestias optio ipsam recusandae facilis.
-        Ea sint nesciunt itaque tempora sit molestias dignissimos reprehenderit,
-        similique corporis modi consectetur enim dolore omnis accusamus. Ipsa
-        delectus sequi dolorum animi! Eligendi ad aperiam veritatis vero
-        accusantium! Eveniet odio rerum totam ea non nihil expedita enim vel id
-        eaque dolore quia, sed dolor aliquid fugit porro beatae. Repellendus nam
-        debitis nihil laborum facere beatae illo consequuntur earum, natus
-        nesciunt nobis saepe expedita in doloremque ea suscipit. Fugit aut, ut
-        ducimus officia porro assumenda rem eaque tenetur, qui aperiam quam.
-        Pariatur beatae fuga praesentium dignissimos rem quos, voluptatum
-        reprehenderit, vel quidem facere tenetur expedita, ratione illo aperiam
-        aliquam cum.
+      <p className="chatscreen-intro">
+        YOU MATCHED WITH
+        <b>
+          &nbsp;
+          {personName.toUpperCase()}&nbsp;
+        </b>
+        on
+        {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
+
+      {personChatHistory.map((e) => {
+        if (personName) {
+          return (
+            <div className="chatscreen-message">
+              <Avatar className="chatscreen-avatar" alt={`${personName}`} />
+              <p className="chatscreen-text">{e}</p>
+            </div>
+          );
+        } else {
+          return (
+            <div className="chatscreen-user-message">
+              <p className="chatscreen-user-text">{e}</p>
+            </div>
+          );
+        }
+      })}
+
+      <form className="user-input">
+        <input
+          value={usertext}
+          onChange={(e) => setUsertext(e.target.value)}
+          className="user-input-field"
+          placeholder="Type ur message"
+          type="text"
+        ></input>
+        <button type="submit" onClick={handleEv} className="user-input-button">
+          SEND
+        </button>
+      </form>
     </div>
   );
 }
