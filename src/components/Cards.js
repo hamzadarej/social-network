@@ -25,6 +25,11 @@ function Cards() {
   
 
   //TINDER CARDS SWIPING PART
+
+  const cartData = Data.map((obj) => {
+    const { img, name } = obj;
+    const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+
   var cartData =dataArr.map((obj) => {
     const {img,name,id}=obj;
     console.log(dataArr);
@@ -34,6 +39,7 @@ let deleteProfil=(id, arr)=> {
 setDataArr(arr.filter((item) => item.id !==id));
     
   };
+
 
     return (
       <div className="card-wrapper">
@@ -58,7 +64,13 @@ setDataArr(arr.filter((item) => item.id !==id));
             delete
           </button>
           <div
-            style={{ backgroundImage: `url(${img})` }}
+            style={
+              name != "Hamza"
+                ? {
+                    backgroundImage: `${stylepic}`,
+                  }
+                : { backgroundImage: `url(${img})` }
+            }
             className="profil-img"
           >
             <h1>{name}</h1>
