@@ -8,27 +8,26 @@
       "https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
       "https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=562&q=80",
       "https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-    ]
+    ],
 
-    "id":4
-
+    "id": 4
   },
   {
     "name": "Olga",
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "im Olga", "lorem"],
-    "id":3
+    "id": 3
   },
   {
     "name": "Nancy",
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "it's Nancy here", "lorem"],
-    "id":2
+    "id": 2
   },
   {
     "name": "Zain",
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hi", "how are you", "lorem"],
-    "id":1
+    "id": 1
   }
 ]

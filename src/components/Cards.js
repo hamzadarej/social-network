@@ -26,13 +26,12 @@ function Cards() {
 
   //TINDER CARDS SWIPING PART
 
-  const cartData = Data.map((obj) => {
-    const { img, name } = obj;
-    const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+ 
+    
 
   var cartData =dataArr.map((obj) => {
     const {img,name,id}=obj;
-    console.log(dataArr);
+    console.log(dataArr);const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
     
 let deleteProfil=(id, arr)=> {
     
@@ -85,6 +84,6 @@ setDataArr(arr.filter((item) => item.id !==id));
     );
   });
   return cartData;
-}
+  }
 
 export default Cards;
