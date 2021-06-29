@@ -1,12 +1,13 @@
 .profile-wrapper {
   color: rgb(141, 141, 141);
-  overflow: scroll;
+  // overflow: scroll;
+  display: flex;
 }
 
 .profile-edit {
   position: absolute;
-  left: 35vw;
-  top: 5px;
+  right: 3%;
+  top: 1%;
   width: 120px;
   height: 35px;
   border-radius: 20px;
@@ -21,8 +22,12 @@
 
 .profile-img {
   width: 100%;
+  // height: 40%;
 }
 
+.profile-information-wrapper , .profile-main-information{
+  padding: 2%;
+}
 .profile-info {
   display: flex;
   align-items: center;
@@ -51,6 +56,13 @@
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+
+  .profile-text-title {
+    padding: 2%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+  }
 
   p {
     padding-top: 20px;
