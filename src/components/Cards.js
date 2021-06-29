@@ -13,7 +13,7 @@ function Cards() {
   const onSwipe = (direction) => {
     console.log("You swiped: " + direction);
   };
- console.log(TinderCard)
+  console.log(TinderCard);
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
@@ -23,6 +23,8 @@ function Cards() {
   //TINDER CARDS SWIPING PART
   const cartData = Data.map((obj) => {
     const { img, name } = obj;
+    const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+
     return (
       <div className="card-wrapper">
         {/* <IconButton>
@@ -37,7 +39,13 @@ function Cards() {
           preventSwipe={["up", "down"]}
         >
           <div
-            style={{ backgroundImage: `url(${img})` }}
+            style={
+              name != "Hamza"
+                ? {
+                    backgroundImage: `${stylepic}`,
+                  }
+                : { backgroundImage: `url(${img})` }
+            }
             className="profil-img"
           >
             <h1>{name}</h1>

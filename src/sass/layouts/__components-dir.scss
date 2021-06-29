@@ -73,6 +73,8 @@ h2 {
 .chatscreen-user-message {
   padding: 19px;
   margin-left: auto;
+  max-width: 80vw;
+  display: block;
 }
 .user-input {
   display: flex;
@@ -93,4 +95,8 @@ h2 {
   background-color: white;
   font-weight: 20px;
   color: black;
+}
+textarea:focus,
+input:focus {
+  outline: none;
 }

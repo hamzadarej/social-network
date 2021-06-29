@@ -14,36 +14,26 @@ function MessageContext(props) {
   //to find the message history of this name
   const namefinder = props.Data.find((el) => el.name == `${personName}`);
   const personChatHistory = namefinder.msges;
-  console.log(personChatHistory);
-
+  const [list, setList] = useState([]);
   const [userInput, setUserInput] = useState("");
-  //dinoume sto state mas keno value ""
+
+  //to write my messages
   function changeHandle(e) {
     //WE GOT WHAT HE WRITES
     setUserInput(e.target.value);
   }
   function ftiaxetoSubmit(e) {
     e.preventDefault();
-
-    if (userInput.length) {
-      //THIS OBJECT IS OURCOMPONENTS, IF WE WANT TO ADD SOMETHING WE ADD IT HERE
-      setUserInput((prevState) => [
-        ...prevState,
-        { id: uuidv4(), title: userInput.trim(), done: false },
-      ]);
-      // console.log(props.id);
-      setUserInput("");
-    }
+    setList((prevState) => [...prevState, userInput.trim()]);
+    console.log(list);
+    setUserInput("");
+    // if (userInput.length) {}
   }
   return (
     <div className="message-context">
       <p className="chatscreen-intro">
-        YOU MATCHED WITH
-        <b>
-          &nbsp;
-          {personName.toUpperCase()}&nbsp;
-        </b>
-        on
+        YOU MATCHED WITH &nbsp;
+        {personName.toUpperCase()}&nbsp; on
         {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
 
@@ -64,7 +54,9 @@ function MessageContext(props) {
         }
       })}
       <div className="chatscreen-user-message">
-        <p className="chatscreen-user-text">zdgn</p>
+        {list.map((e) => (
+          <p className="chatscreen-user-text">{e}</p>
+        ))}
       </div>
 
       <form className="user-input" onSubmit={ftiaxetoSubmit}>
