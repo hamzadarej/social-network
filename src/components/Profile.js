@@ -4,6 +4,7 @@ import { ImLocation2 } from "react-icons/im";
 import { MdWork, MdSchool } from "react-icons/md";
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Slider from "./Slider";
 
 function Profile() {
   return (
@@ -13,6 +14,8 @@ function Profile() {
       </Link>
 
       <button className="profile-edit">Edit Info</button>
+
+      <Slider />
 
       <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
 
