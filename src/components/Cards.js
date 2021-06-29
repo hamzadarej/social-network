@@ -19,14 +19,18 @@ function Cards() {
 
   //TINDER CARDS SWIPING PART
 
-  var cartData = dataArr.map((obj) => {
-    const { img, name, id } = obj;
-    console.log(dataArr);
-    const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+ var cartData =dataArr.map((obj) => {
+    const {img,name,id}=obj;
+    console.log(dataArr);const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+    
 
-    let deleteProfil = (id, arr) => {
-      setDataArr(arr.filter((item) => item.id !== id));
-    };
+let deleteProfil=(id, arr)=> {
+    
+setDataArr(arr.filter((item) => item.id !==id));
+    
+  };
+
+  
 
     return (
       <div className="card-wrapper">
@@ -75,6 +79,6 @@ function Cards() {
     );
   });
   return cartData;
-}
+  }
 
 export default Cards;
