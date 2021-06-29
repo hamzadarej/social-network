@@ -1,26 +1,31 @@
-import React from "react";
+
 import { FaStar, FaRedo, FaBolt, FaHeart } from "react-icons/fa";
+
 import { AiOutlineClose } from "react-icons/ai";
 //for the pressing button effect, i wrap your  FaChevronLeft, FaChevronRight, with that ;)
 import { IconButton } from "@material-ui/core/";
 
-function ButtonsSwipe() {
+function ButtonsSwipe({deleteProfil,dataArr,id}) {
+
   return (
     <div className="buttons-swipe">
-      <IconButton>
-        <FaRedo id="refresh"/>
+      <IconButton className="swipe-redo">
+        <FaRedo />
       </IconButton>
-      <IconButton>
-        <AiOutlineClose id="close"/>
+      <IconButton >
+        <AiOutlineClose onClick={() => {
+              deleteProfil(id, dataArr);
+            }} className="swipe-close"/>
       </IconButton>
-      <IconButton>
-        <FaStar id="superLike" />
+
+      <IconButton className="swipe-star">
+        <FaStar />
       </IconButton>
-      <IconButton>
-        <FaHeart id="like" />
+      <IconButton className="swipe-heart">
+        <FaHeart />
       </IconButton>
-      <IconButton>
-        <FaBolt id="thunder"/>
+      <IconButton className="swipe-bolt">
+        <FaBolt />
       </IconButton>
     </div>
   );
