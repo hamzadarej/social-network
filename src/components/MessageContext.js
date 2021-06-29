@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import SelectInput from "@material-ui/core/Select/SelectInput";
+import { v4 as uuidv4 } from "uuid";
 
 function MessageContext(props) {
   //to get the name of the text user from the url
@@ -15,10 +16,25 @@ function MessageContext(props) {
   const personChatHistory = namefinder.msges;
   console.log(personChatHistory);
 
-  const [usertext, setUsertext] = useState("");
-  const handleEv = (e) => {
+  const [userInput, setUserInput] = useState("");
+  //dinoume sto state mas keno value ""
+  function changeHandle(e) {
+    //WE GOT WHAT HE WRITES
+    setUserInput(e.target.value);
+  }
+  function ftiaxetoSubmit(e) {
     e.preventDefault();
-  };
+
+    if (userInput.length) {
+      //THIS OBJECT IS OURCOMPONENTS, IF WE WANT TO ADD SOMETHING WE ADD IT HERE
+      setUserInput((prevState) => [
+        ...prevState,
+        { id: uuidv4(), title: userInput.trim(), done: false },
+      ]);
+      // console.log(props.id);
+      setUserInput("");
+    }
+  }
   return (
     <div className="message-context">
       <p className="chatscreen-intro">
@@ -47,16 +63,19 @@ function MessageContext(props) {
           );
         }
       })}
+      <div className="chatscreen-user-message">
+        <p className="chatscreen-user-text">zdgn</p>
+      </div>
 
-      <form className="user-input">
+      <form className="user-input" onSubmit={ftiaxetoSubmit}>
         <input
-          value={usertext}
-          onChange={(e) => setUsertext(e.target.value)}
+          value={userInput}
+          onChange={changeHandle}
           className="user-input-field"
           placeholder="Type ur message"
           type="text"
         ></input>
-        <button type="submit" onClick={handleEv} className="user-input-button">
+        <button type="submit" className="user-input-button">
           SEND
         </button>
       </form>
