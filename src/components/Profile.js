@@ -2,10 +2,16 @@ import React from "react";
 import Data from "../Data.json";
 import { ImLocation2 } from "react-icons/im";
 import { MdWork, MdSchool } from "react-icons/md";
+import { FaChevronLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Profile() {
   return (
     <div className="profile-wrapper">
+      <Link to="/hamzadarej">
+        <FaChevronLeft className="profile-back" />
+      </Link>
+
       <button className="profile-edit">Edit Info</button>
 
       <img src={Data[0].img} alt="Profile Picture" />
