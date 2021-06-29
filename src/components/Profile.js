@@ -14,23 +14,23 @@ function Profile() {
 
       <button className="profile-edit">Edit Info</button>
 
-      <img src={Data[0].img} alt="Profile Picture" />
+      <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
 
-      <h2>{Data[0].name}, age</h2>
+      <h2 className="profile-name">{Data[0].name}, age</h2>
 
-      <h5>
+      <h5 className="profile-info">
         <ImLocation2 />
-        Leipzig
+        <p>Leipzig</p>
       </h5>
 
-      <h5>
+      <h5 className="profile-info">
         <MdWork />
-        Web-Developer
+        <p>Web-Developer</p>
       </h5>
 
-      <h5>
+      <h5 className="profile-info">
         <MdSchool />
-        lorem
+        <p>Lorem</p>
       </h5>
 
       <hr />
@@ -50,17 +50,6 @@ function Profile() {
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio vel
           deserunt magnam consequatur officiis eos in harum ipsum dolorum,
-          maxime, voluptate quas, modi dolores provident? Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Consequuntur eveniet ad dolorem,
-          maxime, quas facilis sed est esse officia aliquam ut maiores fugit.
-          Nulla, corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-          natus cupiditate similique, repellendus delectus eum obcaecati
-          incidunt maiores error beatae sint esse. Repellat architecto
-          distinctio doloremque libero sequi praesentium sed quod nulla
-          necessitatibus voluptates, aspernatur harum laborum vero voluptatem
-          consectetur earum! Consectetur porro deleniti tempore omnis accusamus,
-          ducimus ipsam quo!
         </p>
       </div>
     </div>
