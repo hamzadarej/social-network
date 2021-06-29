@@ -15,11 +15,13 @@
 
 .profil-img {
   position: relative;
-  width: 80vw;
+  width: 90vw;
   height: 70vh;
+  max-width: 400px;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
+  margin-top: 5vh;
 }
 
 .card-wrapper {
