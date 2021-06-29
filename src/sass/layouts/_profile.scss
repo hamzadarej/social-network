@@ -1,7 +1,13 @@
 .profile-wrapper {
   color: rgb(141, 141, 141);
-  // overflow: scroll;
+  overflow: scroll;
   display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-wrapper{
+    flex-wrap: wrap;
+  }
 }
 
 .profile-edit {
