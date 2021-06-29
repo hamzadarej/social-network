@@ -10,12 +10,16 @@ import { IconButton } from "@material-ui/core/";
 }
 
 
+
+
 function Cards() {
   //TINDER CARDS SWIPING PART
-  const onSwipe = (direction) => {
+  const onSwipe = (direction) => { 
+    console.log(direction)
     console.log("You swiped: " + direction);
   };
-
+  
+   
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
@@ -27,12 +31,22 @@ function Cards() {
   //TINDER CARDS SWIPING PART
 
  
+
+        
+       
+
+    
+
     
 
   var cartData =dataArr.map((obj) => {
     const {img,name,id}=obj;
     console.log(dataArr);const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
     
+
+    console.log(dataArr);
+    const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
+
 let deleteProfil=(id, arr)=> {
     
 setDataArr(arr.filter((item) => item.id !==id));
@@ -46,12 +60,16 @@ setDataArr(arr.filter((item) => item.id !==id));
           <FaChevronLeft />
         </IconButton> */}
 
+
         {/* TINDER CARDS SWIPING PART */}
         <div
           className="swipe"
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
+
+          preventSwipe={["right", "left"]}
           preventSwipe={["up", "down"]}
+
           
         >
           <button 
@@ -77,9 +95,15 @@ setDataArr(arr.filter((item) => item.id !==id));
         </div>
         {/* TINDER CARDS SWIPING PART */}
 
+        <IconButton>
+          <FaChevronRight onClick={()=>onSwipe("right")} />
+        </IconButton>
+
+
         {/* <IconButton>
           <FaChevronRight />
         </IconButton> */}
+
       </div>
     );
   });
