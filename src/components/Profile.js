@@ -15,7 +15,7 @@ function Profile() {
 
       <button className="profile-edit">Edit Info</button>
 
-      <Slider />
+      {/* <Slider /> */}
 
       <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
 
