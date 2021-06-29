@@ -1,0 +1,28 @@
+.slider {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-img {
+    width: 125px;
+    height: 200px;
+  }
+  
+  .slider-left {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .slider-right {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+  }

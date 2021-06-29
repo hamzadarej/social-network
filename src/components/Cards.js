@@ -1,5 +1,9 @@
 import React ,{useState} from "react";
-import Data from "../Data.json"
+import Data from "../Data.json";
+import TinderCard from "react-tinder-card";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+//for the pressing button effect, wrap your  FaChevronLeft, FaChevronRight, with that ;)
+import { IconButton } from "@material-ui/core/";
 function Cards() {
   //TINDER CARDS SWIPING PART
   const onSwipe = (direction) => {
