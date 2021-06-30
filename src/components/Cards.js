@@ -30,13 +30,16 @@ function Cards() {
     setDataArr(arr.filter((item) => item.id !== id));
 
   };
+
   const [dataArr, setDataArr] = useState(Data);
 
   var cartData = dataArr.map((obj) => {
     const { img, name, id } = obj;
     console.log(id);
     const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
-
+    
+    
+   
     return (
       <TinderCard className="card-wrapper">
         <div
@@ -73,7 +76,7 @@ function Cards() {
         <FaHeart />
       </IconButton>
       <IconButton className="swipe-bolt">
-        <FaBolt />
+      <FaBolt  /> <span className="hover" >like</span>
       </IconButton>
     </div>
         </div>

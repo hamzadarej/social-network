@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   align-items: center;
   z-index: 2;
+  position: relative;
   
 }
 
@@ -34,4 +35,13 @@
   bottom: 15vh;
   color: white;
   left: 15px;
+}
+.hover{
+  color: red;
+  font-size: xx-large;
+  position: absolute;
+  border: 1px solid red;
+  bottom: 500px;
+  padding: 5px;
+  display: block;
 }
