@@ -32,7 +32,7 @@ function App() {
           <Route path="/cards" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
-            <Cards dataArr={dataArr} deleteProfil={deleteProfil} />
+            <Cards />
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
