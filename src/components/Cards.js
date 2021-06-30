@@ -26,14 +26,16 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
-  let deleteProfil = (id, arr) => {
+  function deleteProfil(id, arr) {
     setDataArr(arr.filter((item) => item.id !== id));
-
-  };
+  }
+  function heartProfile(id, arr) {
+    setDataArr(arr.filter((item) => item.id !== id));
+  }
   const [dataArr, setDataArr] = useState(Data);
 
   var cartData = dataArr.map((obj) => {
-    const { img, name, id } = obj;
+    const { img, name, age, id } = obj;
     console.log(id);
     const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
 
@@ -46,7 +48,8 @@ function Cards() {
           preventSwipe={["right", "left"]}
           preventSwipe={["up", "down"]}
         >
-          <div className="profil-img"
+          <div
+            className="profil-img"
             style={
               name !== "Hamza"
                 ? {
@@ -54,28 +57,33 @@ function Cards() {
                   }
                 : { backgroundImage: `url(${img})` }
             }
-            
           >
-            <h1>{name}</h1>
+            <h1>{`${name} ${age}`}</h1>
           </div>
           <div className="buttons-swipe">
-      <IconButton className="swipe-redo">
-        <FaRedo />
-      </IconButton>
-      <IconButton>
-        <AiOutlineClose onClick={()=>{deleteProfil(id,dataArr)}} className="swipe-close" />
-      </IconButton>
+            <IconButton className="swipe-redo">
+              <FaRedo onClick={() => deleteProfil(1, dataArr)} />
+            </IconButton>
+            <IconButton>
+              <AiOutlineClose
+                onClick={() => deleteProfil(id, dataArr)}
+                className="swipe-close"
+              />
+            </IconButton>
 
-      <IconButton className="swipe-star">
-        <FaStar />
-      </IconButton>
-      <IconButton className="swipe-heart">
-        <FaHeart />
-      </IconButton>
-      <IconButton className="swipe-bolt">
-        <FaBolt />
-      </IconButton>
-    </div>
+            <IconButton className="swipe-star">
+              <FaStar />
+            </IconButton>
+            <IconButton className="swipe-heart">
+              <FaHeart
+                onClick={() => heartProfile(id, dataArr)}
+                className="swipe-close"
+              />
+            </IconButton>
+            <IconButton className="swipe-bolt">
+              <FaBolt />
+            </IconButton>
+          </div>
         </div>
       </TinderCard>
     );
