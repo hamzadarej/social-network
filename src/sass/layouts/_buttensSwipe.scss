@@ -1,5 +1,4 @@
 .buttons-swipe {
-
   width: 100%;
   height: 11vh;
   display: flex;
@@ -9,9 +8,8 @@
   left: 0;
   bottom: 0vh;
   border-radius: 20px;
-  z-index: 3;
-  background: linear-gradient(to top,black,rgb(41, 40, 40),transparent);
-  
+
+  background: linear-gradient(to top, black, rgb(41, 40, 40), transparent);
 }
 
 // for make the icons look like buttons
@@ -39,4 +37,3 @@
 .swipe-bolt {
   color: rgb(149, 31, 233) !important;
 }
-

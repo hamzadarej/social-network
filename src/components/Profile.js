@@ -10,7 +10,7 @@ function Profile() {
   return (
     <div className="profile-wrapper">
       <div className="profile-information-wrapper">
-        <Link to="/">
+        <Link to="/cards">
           <FaChevronLeft className="profile-back" />
         </Link>
   
