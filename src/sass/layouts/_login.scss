@@ -53,6 +53,9 @@
             color: white;
             background: $button-primary-color;
         }
+        &button:hover {
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.575);
+          }
     }
     
 }
