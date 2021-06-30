@@ -52,11 +52,8 @@ function Cards() {
     }, 500);
   }
 
-  const [dataArr, setDataArr] = useState(Data);
-  function deleteProfil(id, arr) {
-    setDataArr(arr.filter((item) => item.id !== id));
-
-  };
+ 
+ 
 
   
 
@@ -141,7 +138,7 @@ function Cards() {
       <IconButton className="swipe-bolt">
       <FaBolt  /> <span className="hover" >like</span>
       </IconButton>
-    </div>
+     </div>
 
         </div>
       </TinderCard>
