@@ -23,7 +23,7 @@ function Profile() {
 
         {/* <Slider /> */}
 
-        <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
+        {/*<img className="profile-img" src={Data[0].img} alt="Profile Picture" />*/}
 
 
         <div class="profile-main-information">
