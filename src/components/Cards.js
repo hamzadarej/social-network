@@ -19,6 +19,7 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
+
   //refresh button
   function updateProfil(id, arr, counter) {
     setDataArr(arr.filter((item) => item.id !== id));
@@ -51,12 +52,26 @@ function Cards() {
     }, 500);
   }
 
+  const [dataArr, setDataArr] = useState(Data);
+  function deleteProfil(id, arr) {
+    setDataArr(arr.filter((item) => item.id !== id));
+
+  };
+
+  
+
+
   var cartData = dataArr.map((obj) => {
     const { img, name, age, id } = obj;
     console.log(id);
     const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
 
+
     //git pull origin master
+
+    
+    
+ 
     return (
       <TinderCard className="card-wrapper">
         <div
@@ -99,6 +114,7 @@ function Cards() {
               />
             </IconButton>
 
+
             <IconButton
               onClick={() => starProfile(id, dataArr)}
               className="swipe-star"
@@ -115,6 +131,18 @@ function Cards() {
               <FaBolt />
             </IconButton>
           </div>
+
+      <IconButton className="swipe-star">
+        <FaStar />
+      </IconButton>
+      <IconButton className="swipe-heart">
+        <FaHeart />
+      </IconButton>
+      <IconButton className="swipe-bolt">
+      <FaBolt  /> <span className="hover" >like</span>
+      </IconButton>
+    </div>
+
         </div>
       </TinderCard>
     );
