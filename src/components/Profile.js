@@ -9,7 +9,7 @@ import Slider from "./Slider";
 function Profile() {
   return (
     <div className="profile-wrapper">
-      <Link to="/hamzadarej">
+      <Link to="/">
         <FaChevronLeft className="profile-back" />
       </Link>
 
