@@ -9,36 +9,41 @@ import Slider from "./Slider";
 function Profile() {
   return (
     <div className="profile-wrapper">
-      <Link to="/hamzadarej">
-        <FaChevronLeft className="profile-back" />
-      </Link>
+      <div className="profile-information-wrapper">
+        <Link to="/">
+          <FaChevronLeft className="profile-back" />
+        </Link>
+  
+        <button className="profile-edit">Edit Info</button>
+  
+        {/* <Slider /> */}
+  
+        <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
+  
+        <div class="profile-main-information">
+          <h2 className="profile-name">{Data[0].name}, {Data[0].age} years old</h2>
+    
+          <h5 className="profile-info">
+            <ImLocation2 />
+            <p>{Data[0].location}</p>
+          </h5>
+    
+          <h5 className="profile-info">
+            <MdWork />
+            <p>{Data[0].occupation}</p>
+          </h5>
+    
+          <h5 className="profile-info">
+            <MdSchool />
+            <p>{Data[0].education}</p>
+          </h5>
+        </div>
+        </div>
 
-      <button className="profile-edit">Edit Info</button>
-
-      {/* <Slider /> */}
-
-      <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
-
-      <h2 className="profile-name">{Data[0].name}, age</h2>
-
-      <h5 className="profile-info">
-        <ImLocation2 />
-        <p>Leipzig</p>
-      </h5>
-
-      <h5 className="profile-info">
-        <MdWork />
-        <p>Web-Developer</p>
-      </h5>
-
-      <h5 className="profile-info">
-        <MdSchool />
-        <p>Lorem</p>
-      </h5>
-
-      <hr />
+      <hr className="divider"/>
 
       <div className="profile-text">
+        <h3 className="profile-text-title">About me</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
           rem?
