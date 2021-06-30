@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
 import HeaderMenu from "./components/HeaderMenu";
-import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
@@ -24,13 +22,6 @@ import Login from "./components/Login";
 //rfce
 
 function App() {
-  const [dataArr, setDataArr] = useState(Data);
-
-  function deleteProfil(id, arr) {
-    setDataArr(arr.filter((item) => item.id !== id));
-    console.log(id);
-  }
-
   return (
     <div className="body-container">
       <Router>
