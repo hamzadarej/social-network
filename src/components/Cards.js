@@ -31,8 +31,17 @@ function Cards() {
     setDataArr(arr.filter((item) => item.id !== id));
 
   };
+  function likeProfil(id, arr) {
+    setDataArr(arr.filter((item) => item.id !== id));
 
-  
+  };
+
+ /* const {switchDiplay,setDisplay}=useState(true);
+
+  const diplayS=()=>{
+    switchDiplay ? setDisplay(true) : setDisplay(false);
+    console.log(switchDiplay);
+  }*/
 
   var cartData = dataArr.map((obj) => {
     const { img, name, age, id } = obj;
@@ -64,7 +73,7 @@ function Cards() {
           </div>
           <div className="buttons-swipe">
             <IconButton className="swipe-redo">
-              <FaRedo onClick={() => deleteProfil(1, dataArr)} />
+              <FaRedo onTouchStart={() => deleteProfil(1, dataArr)} onClick={() => deleteProfil(1, dataArr)}/>
             </IconButton>
             <IconButton>
               <AiOutlineClose
@@ -74,13 +83,13 @@ function Cards() {
             </IconButton>
 
       <IconButton className="swipe-star">
-        <FaStar />
+        <FaStar onClick={() => likeProfil(id, dataArr)}/>
       </IconButton>
       <IconButton className="swipe-heart">
-        <FaHeart />
+        <FaHeart onClick={() => likeProfil(id, dataArr)} />
       </IconButton>
       <IconButton className="swipe-bolt">
-      <FaBolt  /> <span className="hover" >like</span>
+      <FaBolt  /> 
       </IconButton>
     </div>
         </div>
