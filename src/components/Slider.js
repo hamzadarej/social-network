@@ -20,10 +20,7 @@ function Slider({ slides }) {
       <FaArrowAltCircleRight className="slider-right" onClick={nextSilde} />
       {Data[0].profileImg.map((slide, index) => {
         return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
+          <div>
             {index === current && (
               <img className="profile-img" src={slide} alt="Profile Image" />
             )}
