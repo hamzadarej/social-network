@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
@@ -7,6 +7,7 @@ import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
+
 
 //HEY GUYS BASIC STRUCTURE + COMPONENTS ARE DONE!!! I  INSTALLED SOME PACKAGES, FIND HERE THE LINKS + COMMANDS AND DON'T FORGET TO INSTALL THEM BEFORE YOU START WORKING
 // FOR SWIPE https://www.npmjs.com/package/react-tinder-card
@@ -26,8 +27,8 @@ function App() {
     <div className="body-container">
       <Router>
         <Switch>
-             <Route path="/" exact>
-            <Login/>
+          <Route path="/" exact>
+            <Login />
           </Route>
           <Route path="/cards" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
@@ -42,7 +43,7 @@ function App() {
             <Profile />
           </Route>
           <Route path="/messages">
-            <HeaderMenu backButton="/" />
+            <HeaderMenu backButton="/cards" />
             <Messages />
           </Route>
         </Switch>
