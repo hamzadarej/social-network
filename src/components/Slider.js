@@ -3,7 +3,7 @@ import Data from "../Data.json";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 function Slider() {
-  const [image, setImage] = useState(0);
+  //const [image, setImage] = useState(0);
 
   //   const nextSilde = () => {
   //     setImage(image === length - 1);
