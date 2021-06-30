@@ -15,10 +15,10 @@
     <img src="./public/images/logo.png" alt="Logo" width="214" height="336">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h2 align="center">project_title</h2>
 
   <p align="center">
-    project_description
+    Our own tinder clone
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -74,6 +74,7 @@ This is a group project. Our idea was to build a clone of the famous dating appl
 * [React-Icons](https://react-icons.github.io/react-icons)
 * [Material-UI](https://material-ui.com/)
 * [React-Tinder-Card](https://github.com/3DJakob/react-tinder-card)
+* [Unsplash](https://unsplash.com/)
 
 
 
@@ -108,7 +109,7 @@ You need to make sure you machine has NPM installed and up to date.
    3.2 npm install react-router-dom
    3.3 npm install react-tinder-card
    3.4 npm install @material-ui/core
-   3.5 npm install react-icons
+   3§.5 npm install react-icons
    ```
 4. Run the application
    ```sh
@@ -118,20 +119,43 @@ You need to make sure you machine has NPM installed and up to date.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-first you be will be greated by our welcome page:
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="./public/images/logo.png" alt="Logo" width="214" height="336">
-  </a>
+    <img src="./public/images/welcome-page.png" alt="Logo" width="214" height="336" border="2px" align="center">
 
-  <h3 align="center">project_title</h3
+<h2 align="center">Wecome page</h2>
+First you be will be greated by our welcome page: After carefull reading the instructions you can log into the application and start using it 😀 </p>
+<hr>
+<p align="center">
+    <img src="./public/images/cards-page.png" alt="Logo" width="214" height="336">
+
+<h2 align="center">Cards page</h2>
+This is where you will find information about other users and potential dates. We hope that you enjoy the swipe gestures, the overall design and layout of this page. Happy dating 🔥  </p>
+<hr>
+<p align="center">
+    <img src="./public/images/chat-page.png" alt="Logo" width="214" height="336" border="2px">
+
+  <img src="./public/images/messages-page.png" alt="Logo" width="214" height="336" border="2px">
+<h2 align="center">Chat and messages page</h2>
+After selecting people that you might have insterest in further interacting with this pages will have find more about each other and discover if you are a match. Be always polite and have fun talking to your crushes 😉 </p>
+<hr>
+<p align="center">
+    <img src="./public/images/user-profile-page.png" alt="Logo" width="214" height="336" border="1px">
+
+<h2 align="center">User profile page</h2>
+In this page you will share information about yourself and make sure people can have a glimpse of how awesome you are 😎  </p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-List of open issues for a list of proposed features, where is the next steps for this application...
+We would be thrilled to have you following us along the process to make this application even better. We would like to let you know that we have some changes coming up, as we learn more about backend and database. Some of the features to be included:
+
+* Log in athentication
+* Functionality for the "edit info" button in the user profile page
+* Real time messaging 
+* Dark theme
+
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -156,18 +180,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
- Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
+Hamza Darej - [github page](https://github.com/hamzadarej) - darejhamza@gmail.com
+Ruben Sinsig - [github page](https://github.com/rubenSinzig) - email
+Angelos Palaiologos - [github page](https://github.com/AngelosPa) - mrpalaiologos@gmail.com
+Sergio Oliveira - [github page](https://github.com/thesergioliveira) - thesergioliveira@gmail.com
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Hadi Nsreeny](https://github.com/hnsreeny), our amazing web dev teacher and mentor.
+* [Tareq](https://github.com/tareq-almasri), we appreciated all the assistance along the way.
+
 
 
 
