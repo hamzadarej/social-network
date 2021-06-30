@@ -4,7 +4,7 @@
   display: flex;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .profile-wrapper{
     flex-wrap: wrap;
   }
@@ -57,8 +57,6 @@
 }
 
 .profile-text {
-  // border: 2px solid red;
-  // margin-top: 20%;
   align-items: center;
   justify-content: center;
   height: 45%;

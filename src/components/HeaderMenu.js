@@ -33,7 +33,7 @@ function HeaderMenu({ backButton }) {
         </div>
         // </Link>
       )}
-      <Link to="/">
+      <Link to="/cards">
         <IconButton>
           <FaFireAlt id="tinder-icon" />
         </IconButton>

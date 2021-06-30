@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
 import HeaderMenu from "./components/HeaderMenu";
-import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
+import Login from "./components/Login";
 
 //HEY GUYS BASIC STRUCTURE + COMPONENTS ARE DONE!!! I  INSTALLED SOME PACKAGES, FIND HERE THE LINKS + COMMANDS AND DON'T FORGET TO INSTALL THEM BEFORE YOU START WORKING
 // FOR SWIPE https://www.npmjs.com/package/react-tinder-card
@@ -23,19 +22,18 @@ import Profile from "./components/Profile";
 //rfce
 
 function App() {
-  
- 
   return (
     <div className="body-container">
       <Router>
         <Switch>
           <Route path="/" exact>
+            <Login />
+          </Route>
+          <Route path="/cards" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
             <Cards />
-            
           </Route>
-
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
           <Route path="/messages/:person" exact>
             <HeaderMenu backButton="/messages" /> <MessageContext Data={Data} />
@@ -44,7 +42,7 @@ function App() {
             <Profile />
           </Route>
           <Route path="/messages">
-            <HeaderMenu backButton="/" />
+            <HeaderMenu backButton="/cards" />
             <Messages />
           </Route>
         </Switch>

@@ -14,10 +14,61 @@
       "https://images.unsplash.com/photo-1439853949127-fa647821eba0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
     ],
 
-    "id": 4
+    "id": 9
+  },
+  {
+    "name": "Nancy",
+    "age": 66,
+    "img": "https://source.unsplash.com/450x800/?woman/",
+    "msges": ["hallo", "it's Nancy here", "lorem"],
+    "location": "Munique",
+    "occupation": "Web Developer",
+    "education": "Bachelor in Computer Science",
+    "id": 8
   },
   {
     "name": "Olga",
+    "age": 27,
+    "img": "https://source.unsplash.com/450x800/?woman/",
+    "msges": ["hallo", "it's Nancy here", "lorem"],
+    "location": "Munique",
+    "occupation": "Web Developer",
+    "education": "Bachelor in Computer Science",
+    "id": 7
+  },
+  {
+    "name": "Meriam",
+    "age": 26,
+    "img": "https://source.unsplash.com/450x800/?woman/",
+    "msges": ["hallo", "it's Nancy here", "lorem"],
+    "location": "Munique",
+    "occupation": "Web Developer",
+    "education": "Bachelor in Computer Science",
+    "id": 6
+  },
+  {
+    "name": "Angelica",
+    "age": 18,
+    "img": "https://source.unsplash.com/450x800/?woman/",
+    "msges": ["hallo", "it's Nancy here", "lorem"],
+    "location": "Munique",
+    "occupation": "Web Developer",
+    "education": "Bachelor in Computer Science",
+    "id": 5
+  },
+  {
+    "name": "Sirin",
+    "age": 50,
+    "img": "https://source.unsplash.com/450x800/?woman/",
+    "msges": ["hallo", "it's Nancy here", "lorem"],
+    "location": "Munique",
+    "occupation": "Web Developer",
+    "education": "Bachelor in Computer Science",
+    "id": 4
+  },
+
+  {
+    "name": "Anna",
     "age": 28,
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "im Olga", "lorem"],
@@ -27,7 +78,7 @@
     "id": 3
   },
   {
-    "name": "Nancy",
+    "name": "Julia",
     "age": 26,
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "it's Nancy here", "lorem"],

@@ -1,31 +1,47 @@
 .card {
-  width: 100vw;
+  width: 90vw;
   height: 90%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 2;
+  position: relative;
   
 }
 
 .profil-img {
   position: relative;
-  width: 100vw;
-  height: 80vh;
+  width: 98vw;
+  height: 89vh;
   max-width: 400px;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
 }
+//delete-dislike effect
+.mytranslatex {
+  transition: 0.5s;
 
+  transform: translateX(-50vw) translateY(30vw) rotate(-30deg);
+}
+//heart-like effect
+.myhearttranslatex {
+  transition: 0.5s;
+
+  transform: translateX(50vw) translateY(30vw) rotate(30deg);
+}
+//star button effect
+.mystartranslatex {
+  transition: 0.5s;
+
+  transform: translateY(-60vw);
+}
 .card-wrapper {
   display: flex;
   justify-content: center;
 }
 .swipe {
   position: absolute;
-  
-
-  
 }
 
 .profil-img h1 {
@@ -33,4 +49,13 @@
   bottom: 15vh;
   color: white;
   left: 15px;
+}
+.hover{
+  color: red;
+  font-size: xx-large;
+  position: absolute;
+  border: 1px solid red;
+  bottom: 500px;
+  padding: 5px;
+  display: block;
 }
