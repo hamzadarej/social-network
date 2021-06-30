@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
 import HeaderMenu from "./components/HeaderMenu";
-import ButtonsSwipe from "./components/ButtonsSwipe";
+//import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";

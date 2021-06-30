@@ -26,7 +26,7 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
-  let deleteProfil = (id, arr) => {
+   function deleteProfil(id, arr){
     setDataArr(arr.filter((item) => item.id !== id));
 
   };
@@ -60,10 +60,10 @@ function Cards() {
           </div>
           <div className="buttons-swipe">
       <IconButton className="swipe-redo">
-        <FaRedo />
+        <FaRedo onClick={()=>deleteProfil(1,dataArr)}/>
       </IconButton>
-      <IconButton>
-        <AiOutlineClose onClick={()=>{deleteProfil(id,dataArr)}} className="swipe-close" />
+      <IconButton >
+        <AiOutlineClose onClick={()=>deleteProfil(id,dataArr)} className="swipe-close" />
       </IconButton>
 
       <IconButton className="swipe-star">
