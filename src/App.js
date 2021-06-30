@@ -24,11 +24,7 @@ import Profile from "./components/Profile";
 
 function App() {
   
-  let deleteProfil = (id, arr) => {
-    setDataArr(arr.filter((item) => item.id !== id));
-
-  };
-  const [dataArr, setDataArr] = useState(Data);
+ 
   return (
     <div className="body-container">
       <Router>
@@ -36,8 +32,8 @@ function App() {
           <Route path="/" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
-            <Cards dataArr={dataArr} deleteProfil={deleteProfil}/>
-            <ButtonsSwipe dataArr={dataArr} deleteProfil={deleteProfil}/>
+            <Cards />
+            
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}

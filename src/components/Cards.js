@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Data from "../Data.json";
-
+import { IconButton } from "@material-ui/core/";
 import TinderCard from "react-tinder-card";
+import { FaStar, FaRedo, FaBolt, FaHeart } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 //import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 //for the pressing button effect, wrap your  FaChevronLeft, FaChevronRight, with that ;)
 
@@ -14,7 +16,7 @@ import TinderCard from "react-tinder-card";
   /*  use for the pics object-fit :contain, it will save u; */
 }
 
-function Cards({ dataArr, deleteProfil }) {
+function Cards() {
   //TINDER CARDS SWIPING PART
   const onSwipe = (direction) => {
     console.log(direction);
@@ -24,6 +26,11 @@ function Cards({ dataArr, deleteProfil }) {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
+  let deleteProfil = (id, arr) => {
+    setDataArr(arr.filter((item) => item.id !== id));
+
+  };
+  const [dataArr, setDataArr] = useState(Data);
 
   var cartData = dataArr.map((obj) => {
     const { img, name, id } = obj;
@@ -39,7 +46,7 @@ function Cards({ dataArr, deleteProfil }) {
           preventSwipe={["right", "left"]}
           preventSwipe={["up", "down"]}
         >
-          <div
+          <div className="profil-img"
             style={
               name !== "Hamza"
                 ? {
@@ -47,10 +54,28 @@ function Cards({ dataArr, deleteProfil }) {
                   }
                 : { backgroundImage: `url(${img})` }
             }
-            className="profil-img"
+            
           >
             <h1>{name}</h1>
           </div>
+          <div className="buttons-swipe">
+      <IconButton className="swipe-redo">
+        <FaRedo />
+      </IconButton>
+      <IconButton>
+        <AiOutlineClose onClick={()=>{deleteProfil(id,dataArr)}} className="swipe-close" />
+      </IconButton>
+
+      <IconButton className="swipe-star">
+        <FaStar />
+      </IconButton>
+      <IconButton className="swipe-heart">
+        <FaHeart />
+      </IconButton>
+      <IconButton className="swipe-bolt">
+        <FaBolt />
+      </IconButton>
+    </div>
         </div>
       </TinderCard>
     );
