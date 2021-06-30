@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
 import HeaderMenu from "./components/HeaderMenu";
-import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
@@ -23,12 +22,6 @@ import Profile from "./components/Profile";
 //rfce
 
 function App() {
-  
-  let deleteProfil = (id, arr) => {
-    setDataArr(arr.filter((item) => item.id !== id));
-
-  };
-  const [dataArr, setDataArr] = useState(Data);
   return (
     <div className="body-container">
       <Router>
@@ -36,8 +29,7 @@ function App() {
           <Route path="/" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
-            <Cards dataArr={dataArr} deleteProfil={deleteProfil}/>
-            <ButtonsSwipe dataArr={dataArr} deleteProfil={deleteProfil}/>
+            <Cards />
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
