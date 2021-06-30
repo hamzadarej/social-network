@@ -24,34 +24,32 @@ import Profile from "./components/Profile";
 
 function App() {
   const [dataArr, setDataArr] = useState(Data);
-  
 
   function deleteProfil(id, arr) {
     setDataArr(arr.filter((item) => item.id !== id));
-     console.log(id)
+    console.log(id);
   }
- 
+
   return (
     <div className="body-container">
       <Router>
         <Switch>
-          <Route path="/hamzadarej/" exact>
+          <Route path="/" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
-            <Cards  dataArr={dataArr} deleteProfil={deleteProfil}/>
+            <Cards dataArr={dataArr} deleteProfil={deleteProfil} />
             <ButtonsSwipe />
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
           <Route path="/messages/:person" exact>
-            <HeaderMenu backButton="/hamzadarej/messages" />{" "}
-            <MessageContext Data={Data} />
+            <HeaderMenu backButton="/messages" /> <MessageContext Data={Data} />
           </Route>
-          <Route path="/hamzadarej/profile" exact>
+          <Route path="/profile" exact>
             <Profile />
           </Route>
           <Route path="/messages">
-            <HeaderMenu backButton="/hamzadarej/" />
+            <HeaderMenu backButton="/" />
             <Messages />
           </Route>
         </Switch>
