@@ -18,6 +18,7 @@
   },
   {
     "name": "Olga",
+    "age": 28,
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "im Olga", "lorem"],
     "location": "Berlin",
@@ -27,6 +28,7 @@
   },
   {
     "name": "Nancy",
+    "age": 26,
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hallo", "it's Nancy here", "lorem"],
     "location": "Munique",
@@ -36,6 +38,7 @@
   },
   {
     "name": "Zain",
+    "age": 31,
     "img": "https://source.unsplash.com/450x800/?woman/",
     "msges": ["hi", "how are you", "lorem"],
     "location": "Dusseldorf",
