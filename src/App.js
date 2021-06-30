@@ -35,7 +35,10 @@ function App() {
     <div className="body-container">
       <Router>
         <Switch>
-          <Route path="/" exact>
+          <Route path="/">
+            <Login/>
+          </Route>
+          <Route path="/cards" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
             <Cards dataArr={dataArr} deleteProfil={deleteProfil} />
@@ -55,7 +58,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <Login/>
     </div>
   );
 }
