@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./public/images/logo.png" alt="Logo" width="214" height="336">
   </a>
 
   <h3 align="center">project_title</h3>
@@ -64,16 +64,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![product-screenshot]](https://example.com)
-
-Discription on the project...
+This is a group project. Our idea was to build a clone of the famous dating application Tinder. Having just finished our first weeks of learning React, we wanted to put our coding muscles to test and apply all we had learned. We are aware of it's overall simplicity, but we would like to share that we had lot's of fun doing it. We also plan to keep adding feature in the future, so please keep tune for further updates and changes.
 
 
 ### Built With
 
 * [React](https://reactjs.org/)
 * [Sass](https://sass-lang.com/)
-* []()
+* [React-Icons](https://react-icons.github.io/react-icons)
+* [Material-UI](https://material-ui.com/)
+* [React-Tinder-Card](https://github.com/3DJakob/react-tinder-card)
 
 
 
@@ -85,30 +85,47 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You need to make sure you machine has NPM installed and up to date.
+
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install 
   ```
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/hamzadarej/social-network.git <your directory name>
    ```
-2. Install NPM packages
+2. Move in the cloned repository 
    ```sh
-   npm install
+   cd <your directory name>
    ```
-
+3. Download NPM packages
+   ```sh
+   3.1 npm install node-sass 
+   3.2 npm install react-router-dom
+   3.3 npm install react-tinder-card
+   3.4 npm install @material-ui/core
+   3.5 npm install react-icons
+   ```
+4. Run the application
+   ```sh
+   npm start
+   ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Space for addintional information and screenshots...
+first you be will be greated by our welcome page:
+<p align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="./public/images/logo.png" alt="Logo" width="214" height="336">
+  </a>
 
+  <h3 align="center">project_title</h3
 
 
 <!-- ROADMAP -->
