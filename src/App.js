@@ -6,6 +6,7 @@ import HeaderMenu from "./components/HeaderMenu";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
+import Login from "./components/Login";
 
 //HEY GUYS BASIC STRUCTURE + COMPONENTS ARE DONE!!! I  INSTALLED SOME PACKAGES, FIND HERE THE LINKS + COMMANDS AND DON'T FORGET TO INSTALL THEM BEFORE YOU START WORKING
 // FOR SWIPE https://www.npmjs.com/package/react-tinder-card
@@ -25,12 +26,14 @@ function App() {
     <div className="body-container">
       <Router>
         <Switch>
-          <Route path="/" exact>
+             <Route path="/" exact>
+            <Login/>
+          </Route>
+          <Route path="/cards" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
             <Cards />
           </Route>
-
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
           <Route path="/messages/:person" exact>
             <HeaderMenu backButton="/messages" /> <MessageContext Data={Data} />
