@@ -34,7 +34,6 @@ function App() {
             <HeaderMenu />
             <Cards />
           </Route>
-
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
           <Route path="/messages/:person" exact>
             <HeaderMenu backButton="/messages" /> <MessageContext Data={Data} />
