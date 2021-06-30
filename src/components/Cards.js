@@ -46,6 +46,8 @@ function Cards() {
       setHeartpic(false);
     }, 500);
   }
+
+
   var cartData = dataArr.map((obj) => {
     const { img, name, age, id } = obj;
     console.log(id);
@@ -108,6 +110,7 @@ function Cards() {
               <FaBolt />
             </IconButton>
           </div>
+
         </div>
       </TinderCard>
     );

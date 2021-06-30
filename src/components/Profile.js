@@ -16,9 +16,15 @@ function Profile() {
 
         <button className="profile-edit">Edit Info</button>
 
+
+        <Slider slides={Data[0].profileImg} />
+
+        {/* <img className="profile-img" src={Data[0].img} alt="Profile Picture" /> */}
+
         {/* <Slider /> */}
 
         <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
+
 
         <div class="profile-main-information">
           <h2 className="profile-name">
