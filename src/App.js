@@ -23,13 +23,12 @@ import Profile from "./components/Profile";
 //rfce
 
 function App() {
-  const [dataArr, setDataArr] = useState(Data);
-
-  function deleteProfil(id, arr) {
+  
+  let deleteProfil = (id, arr) => {
     setDataArr(arr.filter((item) => item.id !== id));
-    console.log(id);
-  }
 
+  };
+  const [dataArr, setDataArr] = useState(Data);
   return (
     <div className="body-container">
       <Router>
@@ -37,8 +36,8 @@ function App() {
           <Route path="/" exact>
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
-            <Cards dataArr={dataArr} deleteProfil={deleteProfil} />
-            <ButtonsSwipe />
+            <Cards dataArr={dataArr} deleteProfil={deleteProfil}/>
+            <ButtonsSwipe dataArr={dataArr} deleteProfil={deleteProfil}/>
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
