@@ -1,4 +1,35 @@
 .slider {
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-left {
+  position: absolute;
+  top: 90%;
+  left: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-right {
+  position: absolute;
+  top: 90%;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.profile-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
     position: relative;
     height: 50vh;
     display: flex;
@@ -26,3 +57,4 @@
     color: white;
     cursor: pointer;
   };
+
