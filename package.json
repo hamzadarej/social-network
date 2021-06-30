@@ -1,7 +1,7 @@
 {
   "name": "social-network-app",
   "version": "0.1.0",
-  "homepage": "https://github.com/hamzadarej/social-network.git",
+  "_homepage": "https://github.com/hamzadarej/social-network.git",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
