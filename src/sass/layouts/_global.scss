@@ -6,7 +6,6 @@
   align-items: center;
   z-index: 2;
   position: relative;
-  
 }
 
 .profil-img {
@@ -50,7 +49,7 @@
   color: white;
   left: 15px;
 }
-.hover{
+.hover {
   color: rgb(55, 184, 151);
   font-size: xx-large;
   position: absolute;
@@ -58,4 +57,24 @@
   bottom: 500px;
   padding: 5px;
   display: block;
+}
+@media only screen and (max-width: 500px) {
+  //delete-dislike effect
+  .mytranslatex {
+    transition: 0.5s;
+
+    transform: translateX(-500px) translateY(300px) rotate(-30deg);
+  }
+  //heart-like effect
+  .myhearttranslatex {
+    transition: 0.5s;
+
+    transform: translateX(500px) translateY(300px) rotate(30deg);
+  }
+  //star button effect
+  .mystartranslatex {
+    transition: 0.5s;
+
+    transform: translateY(-200vw);
+  }
 }
