@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import SelectInput from "@material-ui/core/Select/SelectInput";
+import { v4 as uuidv4 } from "uuid";
 
 function MessageContext(props) {
   //to get the name of the text user from the url
@@ -13,21 +14,26 @@ function MessageContext(props) {
   //to find the message history of this name
   const namefinder = props.Data.find((el) => el.name == `${personName}`);
   const personChatHistory = namefinder.msges;
-  console.log(personChatHistory);
+  const [list, setList] = useState([]);
+  const [userInput, setUserInput] = useState("");
 
-  const [usertext, setUsertext] = useState("");
-  const handleEv = (e) => {
+  //to write my messages
+  function changeHandle(e) {
+    //WE GOT WHAT HE WRITES
+    setUserInput(e.target.value);
+  }
+  function ftiaxetoSubmit(e) {
     e.preventDefault();
-  };
+    setList((prevState) => [...prevState, userInput.trim()]);
+    console.log(list);
+    setUserInput("");
+    // if (userInput.length) {}
+  }
   return (
     <div className="message-context">
       <p className="chatscreen-intro">
-        YOU MATCHED WITH
-        <b>
-          &nbsp;
-          {personName.toUpperCase()}&nbsp;
-        </b>
-        on
+        YOU MATCHED WITH &nbsp;
+        {personName.toUpperCase()}&nbsp; on
         {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
 
@@ -47,16 +53,21 @@ function MessageContext(props) {
           );
         }
       })}
+      <div className="chatscreen-user-message">
+        {list.map((e) => (
+          <p className="chatscreen-user-text">{e}</p>
+        ))}
+      </div>
 
-      <form className="user-input">
+      <form className="user-input" onSubmit={ftiaxetoSubmit}>
         <input
-          value={usertext}
-          onChange={(e) => setUsertext(e.target.value)}
+          value={userInput}
+          onChange={changeHandle}
           className="user-input-field"
           placeholder="Type ur message"
           type="text"
         ></input>
-        <button type="submit" onClick={handleEv} className="user-input-button">
+        <button type="submit" className="user-input-button">
           SEND
         </button>
       </form>
