@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Cards from "./components/Cards";
 import Messages from "./components/Messages";
 import HeaderMenu from "./components/HeaderMenu";
-import ButtonsSwipe from "./components/ButtonsSwipe";
 import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
@@ -23,8 +21,6 @@ import Profile from "./components/Profile";
 //rfce
 
 function App() {
-  
- 
   return (
     <div className="body-container">
       <Router>
@@ -33,7 +29,6 @@ function App() {
             {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
             <Cards />
-            
           </Route>
 
           {/* the  : on the /:person means that any value goes there will be a valid url*/}
