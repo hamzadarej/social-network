@@ -10,7 +10,10 @@ import Login from "./components/Login";
 // presentation :
 //Hamza: introduce himself and his group -> +what the tinder makes talk about general overview of the application cards function and buttons
 //Sergio: login page + general idea +demostrating the readme file
-//Angelos : chat components(the future we will give functionality by using databases , useHistory hook, dataJson
+//Angelos : chat components(
+//in the future we will give functionality by using databases ,
+//useHistory hook,
+// dataJson
 
 //rubin : profile page slider
 

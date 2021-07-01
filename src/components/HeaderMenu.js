@@ -13,7 +13,7 @@ import { IconButton } from "@material-ui/core/";
 }
 
 function HeaderMenu({ backButton }) {
-  //react hook that behaves like toggle in DOM
+  //react hook that work with rooter and behaves like toggle in DOM
   //https://reactrouter.com/web/api/Hooks
   const history = useHistory();
   return (
@@ -25,7 +25,7 @@ function HeaderMenu({ backButton }) {
         </IconButton>
       ) : (
         // link to profile component
-        //<Link to="//profile">
+        //<Link to="/profile">
         <div onClick={() => history.push("/profile")}>
           <IconButton>
             <FaUserAlt />

@@ -61,19 +61,19 @@
 @media only screen and (max-width: 500px) {
   //delete-dislike effect
   .mytranslatex {
-    transition: 0.5s;
+    transition: 0.8s;
 
     transform: translateX(-500px) translateY(300px) rotate(-30deg);
   }
   //heart-like effect
   .myhearttranslatex {
-    transition: 0.5s;
+    transition: 0.8s;
 
     transform: translateX(500px) translateY(300px) rotate(30deg);
   }
   //star button effect
   .mystartranslatex {
-    transition: 0.5s;
+    transition: 0.8s;
 
     transform: translateY(-200vw);
   }

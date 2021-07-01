@@ -9,7 +9,6 @@ function Message(props) {
       <div className="message">
         <Avatar className="message_image" alt={props.name} src={props.pic} />
         <div className="message-details">
-          {/* use .message_details {flex:1;} in css ;) */}
           <h2>{props.name}</h2>
           <p>{props.message}</p>
         </div>
