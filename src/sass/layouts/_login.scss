@@ -1,15 +1,12 @@
 @import "../abstracts/variables";
-
 .login-page-wrapper {
   text-align: left;
   padding: 5%;
   width: 80vw;
   height: 100vh;
-
   .login-page-logo {
     text-align: center;
     padding: 5%;
-
     h1 {
       font-size: 1.2em;
       font-weight: bolder;
@@ -20,7 +17,6 @@
       font-weight: lighter;
     }
   }
-
   .login-page-messages {
     h2 {
       font-size: 1em;
@@ -35,13 +31,11 @@
       font-weight: lighter;
       line-height: 1;
       padding: 1%;
-
       span {
-        color: #ff2471;
+        color: #FF2471;
       }
     }
   }
-
   .button-wrapper {
     text-align: center;
     padding: 10%;

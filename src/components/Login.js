@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { FaUserAlt, FaRocketchat, FaFireAlt } from "react-icons/fa";
 import { FiCheck } from "react-icons/fi";
