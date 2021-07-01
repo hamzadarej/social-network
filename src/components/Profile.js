@@ -10,41 +10,49 @@ function Profile() {
   return (
     <div className="profile-wrapper">
       <div className="profile-information-wrapper">
-        <Link to="/">
+        <Link to="/cards">
           <FaChevronLeft className="profile-back" />
         </Link>
-  
+
         <button className="profile-edit">Edit Info</button>
-  
+
+
+        <Slider slides={Data[0].profileImg} />
+
+        {/* <img className="profile-img" src={Data[0].img} alt="Profile Picture" /> */}
+
         {/* <Slider /> */}
-  
-        <img className="profile-img" src={Data[0].img} alt="Profile Picture" />
-  
+
+        {/*<img className="profile-img" src={Data[0].img} alt="Profile Picture" />*/}
+
+
         <div class="profile-main-information">
-          <h2 className="profile-name">{Data[0].name}, {Data[0].age} years old</h2>
-    
+          <h2 className="profile-name">
+            {Data[0].name}, {Data[0].age} years old
+          </h2>
+
           <h5 className="profile-info">
             <ImLocation2 />
             <p>{Data[0].location}</p>
           </h5>
-    
+
           <h5 className="profile-info">
             <MdWork />
             <p>{Data[0].occupation}</p>
           </h5>
-    
+
           <h5 className="profile-info">
             <MdSchool />
             <p>{Data[0].education}</p>
           </h5>
         </div>
-        </div>
+      </div>
 
-      <hr className="divider"/>
+      <hr className="divider" />
 
       <div className="profile-text">
         <h3 className="profile-text-title">About me</h3>
-        <p>
+        <p> hello hamza it s emna
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
           rem?
         </p>
