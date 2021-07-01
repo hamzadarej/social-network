@@ -58,7 +58,7 @@ function Cards() {
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
           preventSwipe={["right", "left"]}
-          preventSwipe={["up", "down"]}
+          
         >
           <div
             className={
@@ -107,6 +107,7 @@ function Cards() {
               <FaHeart
                 onClick={() => heartProfile(id, dataArr)}
                 onTouchStart={() => heartProfile(id, dataArr)}
+               
                 className="swipe-close"
               />
             </IconButton>
