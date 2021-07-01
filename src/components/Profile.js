@@ -52,7 +52,7 @@ function Profile() {
 
       <div className="profile-text">
         <h3 className="profile-text-title">About me</h3>
-        <p>
+        <p> hello hamza it s emna
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium,
           rem?
         </p>
