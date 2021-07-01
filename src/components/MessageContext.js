@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
-import SelectInput from "@material-ui/core/Select/SelectInput";
-import { v4 as uuidv4 } from "uuid";
 
 function MessageContext(props) {
   //to get the name of the text user from the url
@@ -27,7 +25,6 @@ function MessageContext(props) {
     setList((prevState) => [...prevState, userInput.trim()]);
     console.log(list);
     setUserInput("");
-    // if (userInput.length) {}
   }
   return (
     <div className="message-context">
@@ -36,7 +33,7 @@ function MessageContext(props) {
         {personName.toUpperCase()}&nbsp; on
         {` ${new Date().getDate()}/ ${new Date().getMonth()} / ${new Date().getFullYear()}`}
       </p>
-
+      {/* to seperate the users texts from the guests texts */}
       {personChatHistory.map((e) => {
         if (personName) {
           return (
@@ -58,7 +55,7 @@ function MessageContext(props) {
           <p className="chatscreen-user-text">{e}</p>
         ))}
       </div>
-
+      {/* place to type your thing */}
       <form className="user-input" onSubmit={ftiaxetoSubmit}>
         <input
           value={userInput}

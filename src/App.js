@@ -7,7 +7,12 @@ import MessageContext from "./components/MessageContext";
 import Data from "./Data.json";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
+// presentation :
+//Hamza: introduce himself and his group -> +what the tinder makes talk about general overview of the application cards function and buttons
+//Sergio: login page + general idea +demostrating the readme file
+//Angelos : chat components(the future we will give functionality by using databases , useHistory hook, dataJson
 
+//rubin : profile page slider
 
 //HEY GUYS BASIC STRUCTURE + COMPONENTS ARE DONE!!! I  INSTALLED SOME PACKAGES, FIND HERE THE LINKS + COMMANDS AND DON'T FORGET TO INSTALL THEM BEFORE YOU START WORKING
 // FOR SWIPE https://www.npmjs.com/package/react-tinder-card
@@ -31,7 +36,6 @@ function App() {
             <Login />
           </Route>
           <Route path="/cards" exact>
-            {/* the path should be "/" dont know why i had to put hamzadarei  to make it work...*/}
             <HeaderMenu />
             <Cards />
           </Route>
