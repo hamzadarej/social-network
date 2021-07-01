@@ -140,7 +140,7 @@ function Cards() {
       </IconButton>
      </div>
 
-        </div>
+        
       </TinderCard>
     );
   });
