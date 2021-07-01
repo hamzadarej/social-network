@@ -60,7 +60,7 @@ function Cards() {
           onSwipe={onSwipe}
           onCardLeftScreen={() => onCardLeftScreen("fooBar")}
           preventSwipe={["right", "left"]}
-          preventSwipe={["up", "down"]}
+          
         >
           <div
             className={
