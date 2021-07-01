@@ -4,7 +4,6 @@ import { IconButton } from "@material-ui/core/";
 import TinderCard from "react-tinder-card";
 import { FaStar, FaRedo, FaBolt, FaHeart } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-
 function Cards() {
   //TINDER CARDS SWIPING PART
   const onSwipe = (direction) => {
@@ -19,7 +18,6 @@ function Cards() {
   const onCardLeftScreen = (myIdentifier) => {
     console.log(myIdentifier + " left the screen");
   };
-
   //refresh button
   function updateProfil(id, arr, counter) {
     setDataArr(arr.filter((item) => item.id !== id));
@@ -27,7 +25,6 @@ function Cards() {
   //delete button-swipe left
   function deleteProfil(id, arr, counter) {
     setDataArr(arr.filter((item) => item.id !== id));
-
     setPic(true);
     setTimeout(() => {
       setPic(false);
@@ -36,7 +33,6 @@ function Cards() {
   //star (superlike) button-swipe up
   function starProfile(id, arr) {
     setDataArr(arr.filter((item) => item.id !== id));
-
     setStarpic(true);
     setTimeout(() => {
       setStarpic(false);
@@ -45,30 +41,16 @@ function Cards() {
   //heart(like) button-swipe right
   function heartProfile(id, arr) {
     setDataArr(arr.filter((item) => item.id !== id));
-
     setHeartpic(true);
     setTimeout(() => {
       setHeartpic(false);
     }, 500);
   }
-
- 
- 
-
-  
-
-
   var cartData = dataArr.map((obj) => {
     const { img, name, age, id } = obj;
     console.log(id);
     const stylepic = `url(${Data[1].img}/${Math.floor(Math.random() * 1000)})`;
-
-
     //git pull origin master
-
-    
-    
- 
     return (
       <TinderCard className="card-wrapper">
         <div
@@ -102,18 +84,21 @@ function Cards() {
           </div>
           <div className="buttons-swipe">
             <IconButton className="swipe-redo">
-              <FaRedo onClick={() => updateProfil(1, dataArr)} />
+              <FaRedo
+                onClick={() => updateProfil(1, dataArr)}
+                onTouchStart={() => updateProfil(1, dataArr)}
+              />
             </IconButton>
             <IconButton>
               <AiOutlineClose
                 onClick={() => deleteProfil(id, dataArr)}
+                onTouchStart={() => deleteProfil(id, dataArr)}
                 className="swipe-close"
               />
             </IconButton>
-
-
             <IconButton
               onClick={() => starProfile(id, dataArr)}
+              onTouchStart={() => starProfile(id, dataArr)}
               className="swipe-star"
             >
               <FaStar />
@@ -121,6 +106,7 @@ function Cards() {
             <IconButton className="swipe-heart">
               <FaHeart
                 onClick={() => heartProfile(id, dataArr)}
+                onTouchStart={() => heartProfile(id, dataArr)}
                 className="swipe-close"
               />
             </IconButton>
@@ -128,23 +114,10 @@ function Cards() {
               <FaBolt />
             </IconButton>
           </div>
-
-      <IconButton className="swipe-star">
-        <FaStar />
-      </IconButton>
-      <IconButton className="swipe-heart">
-        <FaHeart />
-      </IconButton>
-      <IconButton className="swipe-bolt">
-      <FaBolt  /> <span className="hover" >like</span>
-      </IconButton>
-     </div>
-
-        
+        </div>
       </TinderCard>
     );
   });
   return cartData;
 }
-
 export default Cards;
