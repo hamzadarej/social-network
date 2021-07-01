@@ -84,6 +84,7 @@ function Cards() {
           </div>
           <div className="buttons-swipe">
             <IconButton className="swipe-redo">
+
               <FaRedo
                 onClick={() => updateProfil(1, dataArr)}
                 onTouchStart={() => updateProfil(1, dataArr)}
@@ -93,20 +94,35 @@ function Cards() {
               <AiOutlineClose
                 onClick={() => deleteProfil(id, dataArr)}
                 onTouchStart={() => deleteProfil(id, dataArr)}
+
+              <FaRedo onClick={() => updateProfil(1, dataArr)} onTouchStart={() => updateProfil(1, dataArr)}/>
+            </IconButton>
+            <IconButton>
+              <AiOutlineClose
+                onClick={() => deleteProfil(id, dataArr)} onTouchStart={() => deleteProfil(id, dataArr)}
+
                 className="swipe-close"
               />
             </IconButton>
             <IconButton
+
               onClick={() => starProfile(id, dataArr)}
               onTouchStart={() => starProfile(id, dataArr)}
+
+              onClick={() => starProfile(id, dataArr)} onTouchStart={() => starProfile(id, dataArr)}
+
               className="swipe-star"
             >
               <FaStar />
             </IconButton>
             <IconButton className="swipe-heart">
               <FaHeart
+
                 onClick={() => heartProfile(id, dataArr)}
                 onTouchStart={() => heartProfile(id, dataArr)}
+
+                onClick={() => heartProfile(id, dataArr)} onTouchStart={() => heartProfile(id, dataArr)}
+
                 className="swipe-close"
               />
             </IconButton>
