@@ -15,12 +15,12 @@
     <img src="./public/images/logo.png" alt="Logo" width="214" height="336">
   </a>
 
-  <h2 align="center">project_title</h2>
+  <h2 align="center">Social Network</h2>
 
   <p align="center">
     Our own tinder clone
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/hamzadarej/social-network/tree/master/src"><strong>Explore the files »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
