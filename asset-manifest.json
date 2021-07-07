@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/social-network/static/css/main.a8a2c280.chunk.css",
-    "main.js": "/social-network/static/js/main.01af3683.chunk.js",
-    "main.js.map": "/social-network/static/js/main.01af3683.chunk.js.map",
-    "runtime-main.js": "/social-network/static/js/runtime-main.87d826de.js",
-    "runtime-main.js.map": "/social-network/static/js/runtime-main.87d826de.js.map",
-    "static/js/2.d05b963d.chunk.js": "/social-network/static/js/2.d05b963d.chunk.js",
-    "static/js/2.d05b963d.chunk.js.map": "/social-network/static/js/2.d05b963d.chunk.js.map",
-    "index.html": "/social-network/index.html",
-    "static/css/main.a8a2c280.chunk.css.map": "/social-network/static/css/main.a8a2c280.chunk.css.map",
-    "static/js/2.d05b963d.chunk.js.LICENSE.txt": "/social-network/static/js/2.d05b963d.chunk.js.LICENSE.txt"
+    "main.css": "/The-T-Clone/static/css/main.10322732.chunk.css",
+    "main.js": "/The-T-Clone/static/js/main.d9034f73.chunk.js",
+    "main.js.map": "/The-T-Clone/static/js/main.d9034f73.chunk.js.map",
+    "runtime-main.js": "/The-T-Clone/static/js/runtime-main.ea2d9b6d.js",
+    "runtime-main.js.map": "/The-T-Clone/static/js/runtime-main.ea2d9b6d.js.map",
+    "static/js/2.53580413.chunk.js": "/The-T-Clone/static/js/2.53580413.chunk.js",
+    "static/js/2.53580413.chunk.js.map": "/The-T-Clone/static/js/2.53580413.chunk.js.map",
+    "index.html": "/The-T-Clone/index.html",
+    "static/css/main.10322732.chunk.css.map": "/The-T-Clone/static/css/main.10322732.chunk.css.map",
+    "static/js/2.53580413.chunk.js.LICENSE.txt": "/The-T-Clone/static/js/2.53580413.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.87d826de.js",
-    "static/js/2.d05b963d.chunk.js",
-    "static/css/main.a8a2c280.chunk.css",
-    "static/js/main.01af3683.chunk.js"
+    "static/js/runtime-main.ea2d9b6d.js",
+    "static/js/2.53580413.chunk.js",
+    "static/css/main.10322732.chunk.css",
+    "static/js/main.d9034f73.chunk.js"
   ]
 }
