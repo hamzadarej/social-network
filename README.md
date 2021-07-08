@@ -182,7 +182,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Hamza Darej - [github page](https://github.com/hamzadarej) - darejhamza@gmail.com
 Ruben Sinsig - [github page](https://github.com/rubenSinzig) - email
-Angelos Palaiologos - [github page](https://github.com/AngelosPa) - mrpalaiologos@gmail.com
+Angelos Papagiannopoulos - [github page](https://github.com/AngelosPa) - mrpalaiologos@gmail.com
 Sergio Oliveira - [github page](https://github.com/thesergioliveira) - thesergioliveira@gmail.com
 
 
