@@ -1,7 +1,11 @@
 {
   "name": "social-network-app",
   "version": "0.1.0",
+<<<<<<< HEAD
   "homepage": "https://the-t-clone-the-real-8aoxqj10a-angelospa.vercel.app/",
+=======
+  "homepage": "https://hamzadarej.github.io/social-network",
+>>>>>>> 959dfc765728cbda645705a173fd5afff0edf0bb
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
